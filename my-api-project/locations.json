@@ -1,0 +1,20 @@
+[
+    {
+        "code": "001",
+        "name": "Estadio Nacional",
+        "image": "https://images.pexels.com/photos/2291073/pexels-photo-2291073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "creationDate": "2022-01-15"
+    },
+    {
+        "code": "002",
+        "name": "Edificio Central",
+        "image": "https://images.pexels.com/photos/1650904/pexels-photo-1650904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "creationDate": "2021-05-20"
+    },
+    {
+        "code": "003",
+        "name": "Campus Universitario",
+        "image": "https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "creationDate": "2023-02-01"
+    }
+]

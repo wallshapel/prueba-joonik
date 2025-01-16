@@ -1,0 +1,12 @@
+# Node.js
+my-frontend/node_modules
+my-frontend/dist
+
+# Laravel
+my-api-project/vendor
+my-api-project/storage
+my-api-project/.env
+
+# General
+.DS_Store
+Thumbs.db
