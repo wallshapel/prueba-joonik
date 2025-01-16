@@ -19,132 +19,131 @@ Antes de empezar, asegúrate de tener instalado lo siguiente:
 ## Instalación 🛠️
 
 Clona el repositorio y sigue los pasos para instalar y configurar el backend y el frontend.
-
-```bash
+~~~
 git clone https://github.com/wallshapel/prueba-joonik.git
 cd prueba-joonik
+~~~
 
-Backend (Laravel) 🐘
-Ve al directorio del backend:
-
-bash
-Copiar
-Editar
+## Backend (Laravel) 🐘
+1. Ve al directorio del backend:
+~~~
 cd my-api-project
-Instala las dependencias con Composer:
-
-bash
-Copiar
-Editar
+~~~
+2. Instala las dependencias con Composer:
+~~~
 composer install
-Copia el archivo de ejemplo .env y configúralo:
-
-bash
-Copiar
-Editar
+~~~
+3. Copia el archivo de ejemplo .env y configúralo:
+~~~
 cp .env.example .env
-Genera la clave de la aplicación:
-
-bash
-Copiar
-Editar
+~~~
+4. Genera la clave de la aplicación:
+~~~
 php artisan key:generate
-Configura la base de datos en el archivo .env.
-
-Ejecuta las migraciones:
-
-bash
-Copiar
-Editar
+~~~
+5. Configura la base de datos en el archivo .env.
+6. Ejecuta las migraciones:
+~~~
 php artisan migrate
-Frontend (React) ⚛️
-Ve al directorio del frontend:
+~~~
 
-bash
-Copiar
-Editar
+## Frontend (React) ⚛️
+1. Ve al directorio del frontend:
+~~~
 cd ../my-frontend
-Instala las dependencias con npm:
-
-bash
-Copiar
-Editar
+~~~
+2.Instala las dependencias con npm:
+~~~
 npm install
-Ejecutar el proyecto ▶️
-Backend 🖥️
-Ve al directorio del backend:
+~~~
 
-bash
-Copiar
-Editar
+---
+
+## Ejecutar el proyecto ▶️
+
+## Backend 🖥️
+1. Ve al directorio del backend:
+~~~
 cd my-api-project
-Inicia el servidor de desarrollo de Laravel:
-
-bash
-Copiar
-Editar
+~~~
+2. Inicia el servidor de desarrollo de Laravel:
+~~~
 php artisan serve
-El backend estará disponible en http://127.0.0.1:8000.
+~~~
+3. El backend estará disponible en http://127.0.0.1:8000.
 
-Frontend 🌐
-Ve al directorio del frontend:
-
-bash
-Copiar
-Editar
+## Frontend 🌐
+1. Ve al directorio del frontend:
+~~~
 cd ../my-frontend
-Inicia el servidor de desarrollo:
-
-bash
-Copiar
-Editar
+~~~
+2. Inicia el servidor de desarrollo:
+~~~
 npm run dev
-El frontend estará disponible en la URL que se muestra en la terminal.
+~~~
+3. El frontend estará disponible en la URL que se muestra en la terminal.
 
-Ejecutar pruebas 🧪
-Backend 🐘
-Ve al directorio del backend:
+---
 
-bash
-Copiar
-Editar
+## Opcional: Usar Docker 🐳
+Puedes ejecutar tanto el backend como el frontend utilizando Docker para simplificar la configuración:
+
+## Backend
+1. Ve al directorio del backend:
+~~~
 cd my-api-project
-Ejecuta las pruebas:
+~~~
+2. Construye y levanta los contenedores:
+~~~
+docker-compose up --build
+~~~
+3. El backend estará disponible en http://localhost:8000
 
-bash
-Copiar
-Editar
-php artisan test
-Frontend ⚛️
-Ve al directorio del frontend:
-
-bash
-Copiar
-Editar
+## Frontend
+1. Ve al directorio del frontend:
+~~~
 cd ../my-frontend
-Ejecuta las pruebas:
+~~~
+2. Construye y levanta los contenedores:
+~~~
+docker-compose up --build
+~~~
+3. El frontend estará disponible en http://localhost:3000
 
-bash
-Copiar
-Editar
+---
+
+## Ejecutar pruebas 🧪
+
+## Backend 🐘
+1. Ve al directorio del backend:
+~~~
+cd my-api-project
+~~~
+2. Ejecuta las pruebas:
+~~~
+php artisan test
+~~~
+
+## Frontend ⚛️
+1. Ve al directorio del frontend:
+~~~
+cd ../my-frontend
+~~~
+2. Ejecuta las pruebas:
+~~~
 npm test
-Estructura del proyecto 📂
-plaintext
-Copiar
-Editar
+~~~
+
+---
+
+## Estructura del proyecto 📂
+
 prueba-joonik/
 ├── my-api-project/   # Código del backend (Laravel)
 └── my-frontend/      # Código del frontend (React)
-Licencia 📜
+
+---
+
+##Licencia 📜
+
 Este proyecto es de uso interno para la prueba técnica de Joonik.
-
-markdown
-Copiar
-Editar
-
-### Notas:
-- Todo está dentro de un solo bloque de código Markdown.
-- Usé contenedores de código (bloques con ` ```bash `) para todos los comandos de terminal.
-- Se agregaron líneas divisorias `---` para organizar las secciones.
-
-Ahora puedes copiar y pegar este bloque directamente en tu archivo `README.md`. 😊
