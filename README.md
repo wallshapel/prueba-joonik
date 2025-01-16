@@ -137,13 +137,14 @@ npm test
 ---
 
 ## Estructura del proyecto 📂
-
+~~~
 prueba-joonik/
 ├── my-api-project/   # Código del backend (Laravel)
 └── my-frontend/      # Código del frontend (React)
+~~~
 
 ---
 
-##Licencia 📜
+## Licencia 📜
 
 Este proyecto es de uso interno para la prueba técnica de Joonik.
