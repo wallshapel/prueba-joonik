@@ -1,36 +1,36 @@
-# Usa una imagen oficial de PHP con Composer y soporte para Laravel
+# Usamos una imagen base de PHP 8.3 con FPM
 FROM php:8.3-fpm
 
-# Instala extensiones de PHP necesarias para Laravel
+# Instalar dependencias necesarias para Laravel y SQLite
 RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libonig-dev \
-    libxml2-dev \
-    zip \
-    unzip \
     git \
+    unzip \
+    sqlite3 \
+    libsqlite3-dev \
+    vim \
     curl \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+    && docker-php-ext-install pdo pdo_sqlite
 
-# Instala Composer
+# Instalar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Configura el directorio de trabajo
+# Crear directorio de la aplicación
 WORKDIR /var/www
 
-# Copia los archivos del proyecto
-COPY . /var/www
+# Copiar el código de la aplicación al contenedor
+COPY . .
 
-# Establecer permisos de escritura en los directorios necesarios
-RUN chmod -R 777 /var/www/storage /var/www/bootstrap/cache
+# Instalar dependencias de Laravel
+RUN composer install --no-dev --optimize-autoloader
 
-# Asegurar que el propietario sea www-data
+# Crear archivo .env temporal y generar clave de aplicación
+RUN touch .env && php artisan key:generate && rm .env
+
+# Asignar permisos para Laravel
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
-# Expone el puerto 9000 (por defecto de PHP-FPM)
+# Exponer puerto
 EXPOSE 9000
 
-# Define el comando para iniciar PHP-FPM
+# Comando por defecto de PHP-FPM
 CMD ["php-fpm"]

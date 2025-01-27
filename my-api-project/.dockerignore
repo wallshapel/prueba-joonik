@@ -1,0 +1,35 @@
+# Ignorar archivos y carpetas específicas
+node_modules/
+vendor/
+.env
+
+# Archivos y carpetas relacionadas con Git
+.git
+.gitignore
+
+# Archivos de logs y caché
+*.log
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Archivos de configuración del entorno local
+.DS_Store
+.env.backup
+.env.example
+
+# Archivos de IDE o editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Archivos de prueba
+tests/
+phpunit.xml
+phpunit.xml.dist
+
+# Archivos de Docker
+docker-compose.override.yml
