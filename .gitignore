@@ -4,7 +4,6 @@ my-frontend/dist
 
 # Laravel
 my-api-project/vendor
-my-api-project/storage
 my-api-project/.env
 
 # General
