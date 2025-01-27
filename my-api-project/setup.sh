@@ -14,6 +14,9 @@ echo "Step 3: Running migrations..."
 php artisan migrate
 
 echo "Step 4: Setting permissions for storage and cache..."
+php artisan storage:link
+mkdir -p storage/framework/views storage/framework/cache
+mkdir -p bootstrap/cache
 chown -R $(whoami):$(whoami) storage bootstrap/cache
 chmod -R 775 storage bootstrap/cache
 
@@ -21,6 +24,7 @@ echo "Step 5: Clearing and caching configurations..."
 php artisan config:clear
 php artisan cache:clear
 php artisan config:cache
+php artisan view:clear
 
 echo "==========================="
 echo " Setup Complete!"
